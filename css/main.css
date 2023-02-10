@@ -513,7 +513,7 @@ body {
   overflow: hidden;
 }
 .contact .white-block-left {
-  background-color: #3c6bda;
+  background-color: rgb(72, 109, 170);
 }
 .contact__box {
   display: -webkit-box;
@@ -567,7 +567,7 @@ body {
 }
 
 .footer {
-  background-color: #3c6bda;
+  background-color: rgb(72, 109, 170);
   color: #fff;
   padding: 1em 0;
   text-align: center;

@@ -353,11 +353,11 @@ body {
 				width: 80%;
 				border: none;
 				color: $pure-white;
-				background-color: $green-color;
+				background-color: $blue-color;
 				cursor: pointer;
 
 				&::before {
-					background-color: $green-color-hover;
+					background-color: $blue-color-hover;
 				}
 			}
 		}
@@ -416,14 +416,14 @@ body {
 			padding: 0.8em;
 			width: 100%;
 			color: $pure-white;
-			background-color: $green-color;
+			background-color: $blue-color;
 			border: none;
 			border-radius: 8px;
 			cursor: pointer;
 			transition: background-color 0.3s;
 
 			&:hover {
-				background-color: $green-color-hover;
+				background-color: $blue-color-hover;
 			}
 		}
 	}
@@ -436,7 +436,7 @@ body {
 	overflow: hidden;
 
 	.white-block-left {
-		background-color: $main-color;
+		background-color: rgba(72, 109, 170);
 	}
 
 	&__box {
@@ -500,7 +500,8 @@ body {
 //footer
 
 .footer {
-	background-color: $main-color;
+	background-color: rgba(72, 109, 170);
+	// background-image: $blue-gradient-solid;
 	color: $pure-white;
 	padding: 1em 0;
 	text-align: center;
