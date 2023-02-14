@@ -1,7 +1,5 @@
 @use "./colors" as *;
-@use "./mixins" as *;
 @use "./components" as *;
-@use "./media" as *;
 
 *,
 *::before,
@@ -21,7 +19,6 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.6rem;
 }
-
 
 //nav
 
@@ -138,13 +135,12 @@ body {
 	animation: navItemAnimation 0.5s both;
 }
 
-
 .black-bars-color,
 .black-bars-color::after,
 .black-bars-color::before {
 	background-color: $dark;
 }
- 
+
 //header
 
 .header {
@@ -213,6 +209,26 @@ body {
 		font-size: 1.4rem;
 		line-height: 1.6;
 	}
+
+	&__btn {
+		margin: 2rem 0;
+		border-radius: 8px;
+		border: none;
+		background-color: $blue-color;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&-link {
+			display: inline-block;
+			padding: 0.5em 2em;
+			color: $pure-white;
+			text-decoration: none;
+		}
+
+		&::before {
+			background-color: $blue-color-hover;
+		}
+	}
 }
 
 //hero-img
@@ -272,6 +288,7 @@ body {
 			height: 100%;
 			border-radius: 8px;
 			background-size: cover;
+			background-position: center;
 			transition: transform 1s, opacity 1s;
 
 			&--one {
@@ -281,12 +298,21 @@ body {
 				background-image: $light-blue-gradient, url("../img/Grafika/termyBania.jpg");
 			}
 			&--three {
+				background-image: $light-blue-gradient, url("../img/Grafika/termyGoracyPotok.jpg");
+			}
+			&--four {
 				background-image: $light-blue-gradient, url("../img/Grafika/szlakiPiesze.webp");
+			}
+			&--five {
+				background-image: $light-blue-gradient, url("../img/Grafika/krupowki.jpg");
+			}
+			&--six {
+				background-image: $light-blue-gradient, url("../img/Grafika/lodowisko.jpg");
 			}
 
 			&-title {
 				font-family: "Cormorant Upright", serif;
-				font-size: 2.8rem;
+				font-size: 2.4rem;
 				font-weight: 300;
 			}
 
@@ -319,12 +345,11 @@ body {
 
 			&-title {
 				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
+				width: 100%;
 				top: 1.2em;
 				font-family: "Cormorant Upright", serif;
 				font-weight: 300;
-				font-size: 2.8rem;
+				font-size: 2.4rem;
 			}
 
 			&-list {
@@ -334,7 +359,7 @@ body {
 
 				&-item {
 					padding: 1em;
-					font-size: 1.4rem;
+					font-size: 1.2rem;
 					border-bottom: 1px solid $pure-white;
 
 					&:last-child {
@@ -348,7 +373,6 @@ body {
 				left: 50%;
 				transform: translateX(-50%);
 				bottom: 2em;
-				padding: 1em;
 				border-radius: 8px;
 				width: 80%;
 				border: none;
@@ -358,6 +382,14 @@ body {
 
 				&::before {
 					background-color: $blue-color-hover;
+				}
+
+				&-link {
+					display: inline-block;
+					padding: 1em;
+					width: 100%;
+					color: $pure-white;
+					text-decoration: none;
 				}
 			}
 		}
@@ -413,18 +445,26 @@ body {
 
 		&-btn {
 			margin-top: 1rem;
-			padding: 0.8em;
 			width: 100%;
 			color: $pure-white;
 			background-color: $blue-color;
 			border: none;
 			border-radius: 8px;
-			cursor: pointer;
 			transition: background-color 0.3s;
+			cursor: pointer;
 
-			&:hover {
+			&::before {
 				background-color: $blue-color-hover;
 			}
+		}
+
+		&-link {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			padding: 0.8em;
+			color: $pure-white;
+			text-decoration: none;
 		}
 	}
 }
@@ -501,7 +541,6 @@ body {
 
 .footer {
 	background-color: rgba(72, 109, 170);
-	// background-image: $blue-gradient-solid;
 	color: $pure-white;
 	padding: 1em 0;
 	text-align: center;
@@ -512,6 +551,7 @@ body {
 // ============
 
 @media (min-width: 576px) {
+	
 }
 
 @media (min-width: 768px) {
